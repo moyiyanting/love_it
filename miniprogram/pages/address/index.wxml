@@ -1,0 +1,22 @@
+<view class="revice_address_row">
+    <view  class="address_btn" wx:if="{{!address.userName}}">
+        <button bindtap="handleChoseAddress" type="primary" plain>获取地址</button>
+    </view>
+    <view wx:else class="user_info_wrap">
+             <view class="user_info">
+                <text class="user_name">{{address.userName}}</text>
+                <text class="user_phone">{{address.telNumber}}</text>
+            </view>
+            <view class="user_info_address">地址： {{address.all}} </view>
+    </view>
+    <view wx:for="{{arr}}" wx:key="number">
+        <view class="user_info">
+                <text class="user_name">{{arr.name}}</text>
+                <text class="user_phone">{{arr.number}}</text>
+            </view>
+            <view class="user_info_address"> {{arr.city}}{{arr.de_address}} </view>
+    </view>
+    <view class="add_address">
+    <navigator  url="/pages/add_address/index" >添加地址</navigator>
+    </view>
+</view>

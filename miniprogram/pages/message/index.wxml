@@ -1,0 +1,88 @@
+<!--pages/message/index.wxml-->
+<text>pages/message/index.wxml</text>
+
+<!-- 私信、通知切换栏 -->
+<view class="selectTab" style='margin-top:{{navH}}rpx' catchtouchmove='true'>
+<view class="flex-row">
+  <view class="message {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">
+  私信
+  </view>
+  <view class="notify {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">
+  通知
+  </view>
+</view>
+<view class='onTabLine' style="margin-left:{{175+currentTab*273}}rpx" catchtouchmove="ture"></view>
+<view class='line'></view>
+</view>
+
+<!--私信消息列表-->
+<scroll-view scroll-y="true" class="message-list" style="margin-top:{{navH}}+47rpx;height:1200rpx"  wx:if="{{currentTab==0}}" >
+  <!--用户-->
+  <view class='user' wx:for="{{messagelist}}" wx:key="_id" bindtap='goTocontactPage'>
+    <image class='header-icon' src="{{item.icon}}"/>
+    <view class='user-content'>
+      <view class='firstline'>
+        <view class='apart'>
+          <view class='username'>
+            <text>{{item.username}}</text>
+          </view>
+        </view>
+        <view class='time'>
+            <text>{{item.time}}</text>
+          </view>
+      </view>
+      <view class='secondline'>
+        <view class='dialog'>
+            <text>{{item.message}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<scroll-view scroll-y class="notify-list" style="margin-top:{{navH}}+47rpx;height:1800rpx;"  wx:if="{{currentTab==1}}">
+<!--系统通知-->
+<view class='notify-type' bindtap='goToSystemPage'>
+  <view class='notify-icon'>
+    <image src='cloud://cw-6g9uc77g2c0f5bc8.6377-cw-6g9uc77g2c0f5bc8-1303253720/img/messageicon/tongzhi-.png'></image>
+  </view> 
+  <view class='notify-name'>
+    系统通知
+  </view>
+</view>
+<view class='liner'></view>
+<!--点赞-->
+<view class='thumbs-up-type' bindtap='goToDianzanPage'>
+  <view class='notify-icon'>
+    <image src='cloud://cw-6g9uc77g2c0f5bc8.6377-cw-6g9uc77g2c0f5bc8-1303253720/img/messageicon/dianzan-.png'></image>
+  </view>
+  <view class='thumbs-up-name'>
+    点赞
+  </view>
+</view>
+<view class='liner'></view>
+<!--评论-->
+  <view class='dialog-type' bindtap='goToCommentPage'>
+  <view class='dialog-icon'>
+    <image src='cloud://cw-6g9uc77g2c0f5bc8.6377-cw-6g9uc77g2c0f5bc8-1303253720/img/messageicon/dialog-.png'></image>
+  </view>
+  <view class='dialog-name'>
+    评论
+  </view>
+</view>
+<view class='liner'></view>
+<!--我关注的-->
+<view class='follow-type' bindtap='goToConcernPage'>
+  <view class='follow-icon'>
+    <image src='cloud://cw-6g9uc77g2c0f5bc8.6377-cw-6g9uc77g2c0f5bc8-1303253720/img/messageicon/guanzhu-.png'></image>
+  </view>
+  <view class='follow-name'>
+    我关注的
+  </view>
+</view>
+<view class='liner'></view>
+<!--底部消息提示框-->
+<view class="unread">
+<text>您有0条未读通知</text>
+</view>
+</scroll-view> 

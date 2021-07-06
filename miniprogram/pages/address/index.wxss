@@ -1,0 +1,41 @@
+.address_btn button{
+ width: 60%;
+ padding: 20rpx;
+ margin-top: 20rpx;
+}
+.user_info_wrap{
+    border: 1rpx solid #cccccc;
+
+}
+.user_info_address{
+    font-size: 35rpx;
+    padding: 20rpx;
+}
+.user_info{
+    margin-top: 10rpx;
+}
+.user_name{
+    text-align: left;
+    padding: 20rpx;
+}
+.user_phone{
+    text-align: right;
+    padding: 5rpx;
+}
+.left{
+    left: 5%;
+    width: 5%;
+}
+.add_address{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(-50%);
+    font-size: 38rpx;
+    color: white;
+    background: #f12035;
+    border-radius: 10rpx;
+    padding: 20rpx;
+}

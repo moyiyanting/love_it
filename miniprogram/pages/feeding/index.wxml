@@ -1,0 +1,59 @@
+<form bindsubmit="submitData">
+      <view class="chooseImage">
+            <text>选择图片 | {{imgFiles.length}}/9</text>
+            <view class="imgList">
+                  <view wx:for="{{imgFiles}}" wx:key="item">
+                        <image src="{{item}}" bindtap="showBig" ></image>
+                  </view>
+                  <block wx:if="{{imgFiles.length<9}}">
+                        <view class="addImage" bindtap="upload_img">
+                              <image class="btn_add" src="cloud://cw-6g9uc77g2c0f5bc8.6377-cw-6g9uc77g2c0f5bc8-1303253720/img/icon/添加 (2).png"></image>
+                        </view>
+                  </block>
+            </view>
+      </view>
+
+      <view class="b_ccontain">
+            <view class="b_card">
+                  <view class="petName">
+                        <view class="b_name">名字</view>
+                        <input type="text" placeholder="请输入宠物的名字" name=petName"></input>
+                  </view>
+                  <view class="b_border"></view>
+                  <view class="petType">
+                        <view class="b_name">类别</view>
+                  </view>
+                  <view class="b_notes">
+                        <radio-group name="petType">
+                              <block wx:for-items="{{petType}}" wx:key="item">
+                                    <radio color="#fbbd08" value="{{item}}">{{item}}</radio>
+                              </block>
+                        </radio-group>
+                  </view>
+                  <view class="b_border"></view>
+                  <view class="kind_detail">
+                        <view class="b_name">详细品种</view>
+                        <input type="text" placeholder="请输入宠物的详细品种" name="kind_detail"></input>
+                  </view>
+                  <view class="b_border"></view>
+                  <view class="years">
+                        <view class="b_name">颜色</view>
+                        <input type="text" placeholder="请输入宠物的颜色" name="color"></input>
+                  </view>
+                  <view class="b_border"></view>
+                  <view class="years">
+                        <view class="b_name">年龄</view>
+                        <input type="text" placeholder="请输入宠物的年龄" name="years"></input>
+                  </view>
+                  <view class="b_border"></view>
+                  <view class="b_name">宠物的详细介绍</view>
+                  <view class="b_notes">
+                        <view class="b_text">
+                              <textarea value="{{notes}}" bindinput="noteInput" maxlength="200" placeholder="请您介绍下您的宠物及送养原因"></textarea>
+                              <view class="b_less">{{note_counts}}/200</view>
+                        </view>
+                  </view>
+                  <button form-type="submit"  class="b_publish" bindtap="submitData">马上发布</button>
+            </view>
+      </view>
+</form>

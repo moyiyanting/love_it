@@ -1,0 +1,22 @@
+<!--miniprogram/pages/detail.wxml-->
+<view class="page">
+<view class="weui-panel__bd">
+  <view  class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+    <view class="tiezi">
+         <image class="tx" url="" src="{{msgDetail.src}}" style="width:100rpx;height:100rpx;border-radius: 50%"></image> 
+          <view class="xinxi">
+          <view class="weui-media-box__title">{{msgDetail.name}}</view>
+          <view class="weui-media-box__desc">{{msgDetail.time}}</view>
+      </view>
+    </view>
+    <view class="title">{{msgDetail.title}}</view>
+      <view class="weui-media-box__bd_in-appmsg">{{msgDetail.article}}</view>
+      <view class="weui-media-box__desc">
+      <image url="" src="{{msgDetail.p1}}" ></image>
+      </view>
+      <navigator url="" class="dz" hover-class="weui-cell_active">
+      <image class="dz" src="cloud://cw-6g9uc77g2c0f5bc8.6377-cw-6g9uc77g2c0f5bc8-1303253720/img/icon/dianzan.png" />
+      </navigator>
+    </view>
+</view> 
+</view>

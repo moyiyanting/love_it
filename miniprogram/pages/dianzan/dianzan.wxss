@@ -1,0 +1,64 @@
+/* miniprogram/pages/dianzan/dianzan.wxss */
+
+.list{
+  display: flex;
+  flex-direction: column;
+}
+
+.tongzhi{
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+.tongzhi-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.firstline{
+  display: flex;
+  flex-direction: row;
+}
+
+.apart{
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+  width: 400rpx;
+}
+
+.username{
+  font-size: 36rpx;
+  margin-top: 26rpx;
+  font-weight: 400;
+}
+
+.time{
+  display: flex;
+  width: 60rpx;
+  font-size: 24rpx;
+  margin-top: 26rpx;
+  color: #AEAEAE;
+  margin-left: 30rpx;
+}
+
+.secondline{
+  display: flex;
+  flex-direction: row;
+}
+
+.tishi{
+  width: 545rpx;
+  font-size: 28rpx;
+  color: #AEAEAE;
+  margin-left: 20rpx;
+  margin-top: 15rpx;
+}
+
+.cover{
+  width: 140rpx;
+  height: 140rpx;
+  margin-right: 15rpx;
+  border-radius: 8rpx;
+}

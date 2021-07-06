@@ -1,0 +1,88 @@
+<!--pages/add/index.wxml-->
+<form bindsubmit="submitData">
+<view>
+	<view bindtap="tapToShow" class="goods-type">
+		<text wx:if="{{community.g_type !== ''}}">{{community.g_type}}</text>
+		<text wx:else>发布类型</text>
+		<view class="iconfont "><van-icon name="arrow" /></view>
+	</view>
+
+	<view class="main">
+		<view class="title">
+			<van-cell-group>
+				<van-field
+					maxlength="20"
+					placeholder="输入标题 关键字都是小伙伴们喜欢搜索的哟"
+					border="{{ false }}"
+					bind:change="saveMessage"
+					data-type="title"
+					error-message="{{ title_err }}"
+				/>
+			</van-cell-group>
+		</view>
+
+		<view class="description">
+			<van-cell-group>
+				<van-field
+				type="textarea"
+				maxlength="150"
+				placeholder="输入文字……"
+				autosize
+				bind:change="saveMessage"
+				data-type="description"
+				border="{{ false }}"
+				error-message="{{ descrip_err }}"
+				/>
+			</van-cell-group>
+		</view>
+		<view class="pictures">
+			<view wx:key="{{index}}" class="img_item" wx:for="{{tempFilePaths}}">
+				<image mode="aspectFit" src="{{item}}" />
+				<van-icon bind:click="deletePic" data-index="{{index}}" name="close" />
+			</view>
+
+			<view bindtap="chooseImage" class="img_item upload-img">
+				<van-icon name="plus" />
+			</view>
+		</view>
+	</view>
+
+	<view class="sale_detail">
+		<van-cell-group>
+			<van-field
+			    label="联系方式 :"
+			    placeholder="请输入手机号"
+			    error-message="{{ phone_err }}"
+			    border="{{ true }}"
+			    bind:change="saveMessage"
+			    data-type="phone"
+			    type="number"
+			/>
+      			<van-field
+			    label="备注 :"
+			    placeholder="请输入备注信息"
+			    border="{{ true }}"
+			    bind:change="saveMessage"
+			    data-type="info"
+			    type="string"
+			/>
+		</van-cell-group>
+	</view>
+	<button bindtap="toPublish" class="publish_btn" size="large">确认发布</button>
+	<van-popup
+		show="{{ showPopup }}"
+		close-on-click-overlay="{{true}}"
+		class="custom-style"
+		position="bottom"
+		bind:close="onClosePopup"
+	>
+		<van-picker
+		  show-toolbar
+		  title="商品类型"
+		  columns="{{ columns }}"
+		  bind:cancel="onClosePopup"
+		  bind:confirm="onConfirm"
+		/>
+	</van-popup>
+</view>
+</form>

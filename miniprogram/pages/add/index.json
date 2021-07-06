@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "社区发布",
+  "usingComponents": {
+        "van-field": "../../vant/field/index",
+        "van-popup": "../../vant/popup/index",
+        "van-picker": "../../vant/picker/index",
+        "van-icon": "../../vant/icon/index",
+        "van-checkbox": "../../vant/checkbox/index",
+        "van-button": "../../vant/button/index"
+  }
+}

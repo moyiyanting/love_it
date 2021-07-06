@@ -1,0 +1,58 @@
+.picture{
+ display: flex;
+ margin:auto;
+ flex-direction: column;
+}
+
+.picture_1{
+  margin-top: 5px;
+}
+
+.adoption_detail{
+ display: flex;
+ flex-direction: column;
+ width:96%;
+ height: 100rpx;
+ align-self:reater;
+ margin-bottom: 20rpx;
+}
+
+.notes_box {
+  width: 100%;
+  padding: 24rpx 24rpx 0 24rpx;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.notes {
+  width: 100%;
+  background: rgb(238, 238, 238);
+  color: #aaa;
+  padding: 20rpx 20rpx 10rpx 20rpx;
+  border-radius: 10rpx;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.notes_text {
+  letter-spacing: 2rpx;
+  font-size: 28rpx;
+  line-height: 45rpx;
+  padding-bottom: 10rpx;
+}
+
+.adoption{
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  width: 80%;
+  text-align: center;
+  transform: translateX(-50%);
+  font-size: 38rpx;
+  color: white;
+  background: #f0a00d;
+  border-radius: 10rpx;
+  padding: 20rpx;
+}
+

@@ -1,0 +1,348 @@
+/* pages/adoption/index.wxss */
+.swiper-tab {
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: white;
+}
+ 
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 25%;
+  color: #666;
+  border-bottom: 0rpx;
+  position: relative;
+}
+ 
+.swiper-tab-list i {
+  position: absolute;
+  bottom: 30%;
+  right: 14%;
+  width: 0px;
+  height: 0px;
+  border: 5px solid #4e4e4e;
+  border-top-color: #4e4e4e;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+ 
+.on {
+  color: #f63;
+  border-bottom: 2rpx solid #f63;
+}
+ 
+.on i {
+  border: 5px solid #f63;
+  border-top-color: #f63;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+ 
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+ 
+.swiper-box view {
+  text-align: center;
+}
+ 
+.swiper-item {
+  background: #fff;
+  width: 100%;
+  height: 800rpx;
+  display: none;
+  position: absolute;
+  
+  z-index: 333333;
+  left: 0;
+  animation: displays 1s;
+}
+ 
+@keyframes displays {
+  from {
+    height: 0px;
+  }
+ 
+  to {
+    height: 600rpx;
+  }
+}
+ 
+.swiper-beijing {
+  width: 100%;
+  height: 200%;
+  background: #000;
+  opacity: 0.5;
+  position: absolute;
+  top: 130px;
+  left: 0;
+  display: none;
+  z-index: 888;
+  animation: 1s;
+}
+ 
+ 
+/* 下拉切换中的切换 */
+ 
+.nav {
+  width: 20%;
+  height: 100rpx;
+  float: left;
+  flex-direction: row;
+}
+ 
+.default {
+  width: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  font-size: 28rpx;
+  overflow: hidden;
+}
+ 
+.red {
+  width: 100%;
+  float: right;
+  line-height: 100rpx;
+  text-align: center;
+  color: #f63;
+  font-weight: bold;
+  font-size: 28rpx;
+}
+ 
+.show {
+  display: block;
+  text-align: center;
+  line-height: 200rpx;
+}
+ 
+.hidden {
+  display: none;
+  text-align: center;
+  line-height: 200px;
+}
+ 
+#rights {
+  width: 79%;
+  float: right;
+  border-left: solid 1px #eee;
+  font-size: 15px;
+  max-height: 600rpx;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+ 
+/*添加class改变样式  */
+ 
+.location_bottom {
+  width: 100%;
+  height: 400rpx;
+  line-height: 140rpx;
+  color: #d91f16;
+  font-size: 28rpx;
+  padding: 0 20rpx;
+  align-items: center;
+}
+ 
+.add_city {
+  width: 90%;
+  display: block;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-bottom: 2rpx solid #ebebeb;
+  color: #000;
+  padding-left: 5%;
+}
+ 
+.add_adress {
+  height: 70rpx;
+  line-height: 70rpx;
+  border-bottom: 2rpx solid #f63;
+  color: #f63;
+}
+ 
+.add_adre {
+  height: 70rpx;
+  line-height: 70rpx;
+  border-bottom: 2rpx solid #f63;
+  color: #f63;
+}
+ 
+.add_citying {
+  padding-left: 5%;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-bottom: 2rpx solid #f63;
+  color: #f63;
+}
+ 
+.add_House {
+  padding-left: 5%;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-bottom: 2rpx solid #f63;
+  color: #f63;
+}
+ 
+/*// 筛选  */
+ 
+.shaixuankuang {
+  width: 100%;
+  height: 800rpx;
+  overflow: hidden;
+  max-height: 800rpx;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+ 
+.shaixuan {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+ 
+.shuaixuantiaojian {
+  width: 95%;
+  padding: 0 2.5% 1%;
+  display: block;
+  font-size: 15px;
+  color: #999;
+}
+ 
+.chose-txt {
+  /* border-radius: 6px; */
+  font-size: 26rpx;
+  width: 29%;
+  margin: 4px 14rpx;
+  float: left;
+}
+ 
+.chose-p {
+  line-height: 25px;
+  width: 100%;
+  height: 25px;
+  text-align: center;
+  float: left;
+}
+ 
+.zidingyi {
+  width: 95%;
+  height: 50px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+ 
+.zidingyi span {
+  float: left;
+  font-size: 16px;
+  line-height: 40px;
+  color: #666;
+  margin-right: 15rpx;
+}
+ 
+.zidingyi input {
+  width: 50px;
+  padding-left: 10rpx;
+  float: left;
+  margin-top: 10rpx;
+  font-size: 15px;
+  line-height: 40px;
+  border: solid 1px #eee;
+  color: #666;
+}
+ 
+.zidingyi p {
+  float: left;
+  margin: 0 15rpx;
+  line-height: 40px;
+  color: #666;
+}
+ 
+.zidingyi button {
+  height: 28px;
+  float: left;
+  margin: 10rpx 0 0 25rpx;
+  font-size: 13px;
+  line-height: 28px;
+  /* border: solid 1px #eee; */
+  color: #666;
+}
+ 
+.qingkong {
+  width: 95%;
+  height: 40px;
+  margin: 40rpx auto 30rpx;
+}
+ 
+.qingkong span {
+  float: left;
+  width: 35%;
+  height: 33px;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  color: #666;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 33px;
+  border-radius: 3px;
+}
+.qingkong p{
+  float: right;
+    width: 55%;
+    height: 35px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 35px;
+    background: rgba(229,65,65,0.95);
+    border-radius: 3px;
+}
+
+
+.adoption_pet{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  align-items: center;
+  background-color: snow;
+}
+
+.adoption_pet_1{
+  width:50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.img{
+  width:370rpx;
+  height: 370rpx;
+  border-radius:20rpx;
+}
+
+.adoption_pet_2{
+  display: flex;
+  flex-direction: row;
+  height: 80rpx;
+  border:1px solid rgb(250, 145, 60);
+  width: 70%;
+  background-color: rgb(245,239,239);
+  border-radius: 40rpx;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 60rpx;
+  padding-right: 60rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}

@@ -1,0 +1,22 @@
+<!--miniprogram/pages/system/system.wxml-->
+<!--<text>miniprogram/pages/system/system.wxml</text>-->
+
+<scroll-view class="list" scroll-y>
+  <view class="tongzhi" wx:for="{{systemlist}}" wx:key="_id">
+    <view class="tongzhi-content">
+      <view class='firstline'>
+        <view class='apart'>
+          <view class='username'>
+            <text>{{item.title}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='secondline'>
+        <view class='tishi'>
+            <text>{{item.neirong}}</text>
+        </view>
+      </view>
+    </view>
+    <image class='cover' src="{{item.cover}}"/>
+  </view>
+</scroll-view>

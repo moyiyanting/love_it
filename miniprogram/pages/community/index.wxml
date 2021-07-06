@@ -1,0 +1,204 @@
+<!--pages/community/index.wxml-->
+<view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+              <view class="weui-search-bar__box">
+                <icon class="weui-icon-search_in-box" type="search" size="10" />
+                <input type="text" class="weui-search-bar__input" placeholder="输入搜索内容" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                  <icon type="clear" size="14"></icon>
+                </view>
+              </view>
+              <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                <icon class="weui-icon-search" type="search" size="14"></icon>
+                <view class="weui-search-bar__text">搜索</view>
+              </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+            <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+			<view class="weui-cell weui-cell_active weui-cell_access">
+				<view class="weui-cell__bd weui-cell_primary">
+					<view>实时搜索文本</view>
+				</view>
+			</view>
+			<view class="weui-cell weui-cell_active weui-cell_access">
+				<view class="weui-cell__bd weui-cell_primary">
+					<view>实时搜索文本</view>
+				</view>
+			</view>
+			<view class="weui-cell weui-cell_active weui-cell_access">
+				<view class="weui-cell__bd weui-cell_primary">
+					<view>实时搜索文本</view>
+				</view>
+			</view>
+			<view class="weui-cell weui-cell_active weui-cell_access">
+				<view class="weui-cell__bd weui-cell_primary">
+					<view>实时搜索文本</view>
+				</view>
+			</view>
+		</view>
+          </view>
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for-items="{{tabs}}" wx:key="{{index}}">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index?'weui-bar__item_on':''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform:translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd">今日推荐</view>
+            <view class="weui-panel__bd">
+              <navigator wx:for="{{com0}}" wx:key="_id" url="/pages/detail/detail?id={{item._id}}" class="weui-media-box weui-media-box_appmsg " hover-class="weui-cell_active">
+                <view  class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="tiezi">
+                  <image  url="" src="{{item.src}}" style="width:100rpx;height:100rpx;border-radius: 50%"></image> 
+                  <view class="xinxi">
+                    <view class="weui-media-box__title">{{item.name}}</view>
+                    <text class="weui-media-box__desc">{{item.time}}</text>
+                  </view>
+                  </view>
+                  <view class="weui-media-box__title">{{item.title}}</view>
+                  <view class="weui-media-box__desc">{{item.article}}</view>
+                  <view class="weui-media-box__desc">
+                    <image url="" src="{{item.p1}}" ></image>
+                  </view>
+                  <navigator url="" class="dz" hover-class="weui-cell_active">
+                  <image class="dz" src="cloud://cw-6g9uc77g2c0f5bc8.6377-cw-6g9uc77g2c0f5bc8-1303253720/img/icon/dianzan.png" />
+                  </navigator>
+                </view>
+              </navigator>
+            </view> 
+            <view class="page" data-weui-theme="{{theme}}">
+</view>
+          
+            <!-- 查看更多 -->
+            <view class="weui-panel__ft">  
+              <view class="weui-cell weui-cell_access weui-cell_link">
+                <view class="weui-cell__bd">查看更多</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+              </view>
+            </view>
+            
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view class="weui-flex">
+            <view class="weui-flex__item">
+              <view class="placeholder">行为纠正</view>
+            </view>
+            <view class="weui-flex__item">
+              <view class="placeholder">一出好戏</view>
+            </view>
+          </view>
+          <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd">今日推荐</view>
+            <view class="weui-panel__bd">
+              <navigator wx:for="{{com1}}" wx:key="_id" url="/pages/detail/detail?id={{item._id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                <view  class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="tiezi">
+                  <image  url="" src="{{item.src}}" style="width:100rpx;height:100rpx;border-radius: 50%"></image> 
+                  <view class="xinxi">
+                    <view class="weui-media-box__title">{{item.name}}</view>
+                    <text class="weui-media-box__desc">{{item.time}}</text>
+                  </view>
+                  </view>
+                  <view class="weui-media-box__title">{{item.title}}</view>
+                  <view class="weui-media-box__desc">{{item.article}}</view>
+                  <view class="weui-media-box__desc">
+                    <image url="" src="{{item.p1}}" ></image>
+                  </view>
+                  <navigator url="" class="dz" hover-class="weui-cell_active">
+                  <image class="dz" src="cloud://cw-6g9uc77g2c0f5bc8.6377-cw-6g9uc77g2c0f5bc8-1303253720/img/icon/dianzan.png" />
+                  </navigator>
+                </view>
+              </navigator>
+            </view> 
+            <view class="page" data-weui-theme="{{theme}}">
+</view>
+          
+            <!-- 查看更多 -->
+            <view class="weui-panel__ft">  
+              <view class="weui-cell weui-cell_access weui-cell_link">
+                <view class="weui-cell__bd">查看更多</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+              </view>
+            </view>
+            
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd">今日推荐</view>
+            <view class="weui-panel__bd">
+              <navigator wx:for="{{com2}}" wx:key="_id" url="/pages/detail/detail?id={{item._id}}" class="weui-media-box weui-media-box_appmsg " hover-class="weui-cell_active">
+                <view  class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="tiezi">
+                  <image  url="" src="{{item.src}}" style="width:100rpx;height:100rpx;border-radius: 50%"></image> 
+                  <view class="xinxi">
+                    <view class="weui-media-box__title">{{item.name}}</view>
+                    <text class="weui-media-box__desc">{{item.time}}</text>
+                  </view>
+                  </view>
+                  <view class="weui-media-box__title">{{item.title}}</view>
+                  <view class="weui-media-box__desc">{{item.article}}</view>
+                  <view class="weui-media-box__desc">
+                    <image url="" src="{{item.p1}}" ></image>
+                  </view>
+                  <navigator url="" class="dz" hover-class="weui-cell_active">
+                  <image class="dz" src="cloud://cw-6g9uc77g2c0f5bc8.6377-cw-6g9uc77g2c0f5bc8-1303253720/img/icon/dianzan.png" />
+                  </navigator>
+                </view>
+              </navigator>
+            </view> 
+            <view class="page" data-weui-theme="{{theme}}">
+</view>
+          
+            <!-- 查看更多 -->
+            <view class="weui-panel__ft">  
+              <view class="weui-cell weui-cell_access weui-cell_link">
+                <view class="weui-cell__bd">查看更多</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+              </view>
+            </view>
+            
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+          <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd">今日推荐</view>
+            <view class="weui-panel__bd">
+              <navigator wx:for="{{com3}}" wx:key="id" url="/pages/detail/detail?id={{item._id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+					    <view class="weui-media-box__hd">
+						    <image src="{{item.p1}}" style="width:200rpx;height:200rpx"></image>
+					    </view>
+					    <view class="weui-media-box__bd">
+						    <h4 class="weui-media-box__title">{{item.title}}</h4>
+						    <view class="weui-media-box__desc">{{item.article}}</view>
+					    </view>
+				      </navigator>
+            </view> 
+            <view class="page" data-weui-theme="{{theme}}"></view>
+          
+            <!-- 查看更多 -->
+            <view class="weui-panel__ft">  
+              <view class="weui-cell weui-cell_access weui-cell_link">
+                <view class="weui-cell__bd">查看更多</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="page__bd page__bd_spacing">
+		<view class="weui-footer">
+			<view class="weui-footer__text">Copyright &copy; 2008-2016 weui.io</view>
+    </view>
+  </view>
+</view>

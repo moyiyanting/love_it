@@ -1,0 +1,74 @@
+{
+  "cloud": true,
+  "pages": [
+    
+
+    "pages/index/index",
+    "pages/community/index",
+    "pages/add/index",
+    "pages/message/index",
+    "pages/me/index",
+    "pages/adoption/index",
+    "pages/adoption_detail/index",
+    "pages/feeding/index",
+    "pages/raise/index",
+    "pages/about_us/index",
+    "pages/my_space/index",
+    "pages/address/index",
+    "pages/feedback/index", 
+    "pages/login/index",
+    "pages/contact/contact",
+    "pages/system/system",
+    "pages/dianzan/dianzan",
+    "pages/comment/comment",
+    "pages/concern/concern",
+    "pages/detail/detail",
+    "pages/add_address/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color":"#000000",
+    "selectedColor":"#ffaa00",
+    "borderStyle":"white",
+    "backgroundColor":"#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/shouye-before.png",
+        "selectedIconPath": "images/shouye-after.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/community/index",
+        "iconPath": "images/community-before.png",
+        "selectedIconPath": "images/community-after.png",
+        "text": "社区"
+      },     
+      {
+        "pagePath": "pages/add/index",
+        "iconPath": "images/add.png",
+        "selectedIconPath": "images/add.png"
+      }, 
+      {
+        "pagePath": "pages/message/index",
+        "iconPath": "images/message-before.png",
+        "selectedIconPath": "images/message-after.png",
+        "text": "消息"
+      }, 
+      {
+        "pagePath": "pages/me/index",
+        "iconPath": "images/me-before.png",
+        "selectedIconPath": "images/me-after.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

@@ -1,0 +1,25 @@
+ <view class="add_address_wrap">
+    <view class="listItems">
+        <text class="listLeft">收货人姓名: </text>
+        <input class="listRight" type="number" bindinput="name"  placeholder="请输入用户名！" name="name"/>
+    </view>
+     <view class="listItems">
+        <text class="listLeft">电话: </text>
+        <input  class="listRight" type="number" bindinput="number" placeholder="请输入收货人电话！" name=" number"/>
+    </view>
+     <view class="listItems">
+        <text class="listLeft">邮政编码: </text>
+        <input class="listRight" type="number"bindinput="add_code"  placeholder="请输入邮政编码！" name="add_code"/>
+    </view>
+     <view class="listItems">
+        <text class="listLeft">所在城市: </text>
+        <input class="listRight" type="number" bindinput="city" placeholder="请输入所在城市！" name="city"/>
+    </view>
+     <view class="listItems">
+        <text class="listLeft">详细地址: </text>
+        <input  class="listRight" type="number"bindinput="de_address"  placeholder="请输入详细地址！" name="de_address"/>
+    </view>
+    <view class="btnGroup">
+        <button class="btn" bindtap="add_handle">确认添加</button>
+    </view>
+   </view>

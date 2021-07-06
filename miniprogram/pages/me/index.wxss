@@ -1,0 +1,107 @@
+Page{
+  background-color: #f1d179;
+  }
+  .user_info_wrap{
+   height: 30vh;
+   overflow: hidden;
+   background-color: #d4a31d; 
+  }
+  .user_img_wrap{
+    position: relative;
+  }
+  .user_bg{
+  align-content: center;
+  width: 100%;
+    filter: blur(10rpx);
+  }
+  .user_btn_na {
+    position: absolute;
+    left: 50%;
+    margin-top: 20%;
+    transform: translateX(-50%);
+    border: 5rpx solid rgb(142, 224, 19);
+    font-size: 40rpx;
+    text-align: center;
+    border-radius: 10rpx;
+    padding: 15rpx;
+  }
+  .user_info{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5%;
+    text-align: center;
+  }
+  .user_icon{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  }
+  .user_name{
+    color: #ffffff;
+    margin-top: 20rpx;
+    font-size: 40rpx;
+  
+  }
+  .user_content{
+    position: relative;
+  }
+  .user_main{
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -40rpx;
+  }
+  .main_wrap{
+    background-color: #ffffff;
+    display: flex;
+  }
+  .main_wrap navigator{
+    flex: 1;
+    text-align: center;
+    padding: 10rpx 0;
+  }
+  .his_num{
+    color:red;
+  }
+  .his_name{
+    font-size: 20rpx;
+  }
+  .orders_wrap{
+  background-color: #ffffff;
+  margin-top: 30rpx;
+  }
+  .orders_title{
+    padding: 20rpx;
+    border-bottom: 1px solid #ccc;
+  }
+  .order_content{
+    display: flex;
+  }
+  .order_content navigator{
+      flex: 1;
+      padding: 15rpx;
+      text-align: center;
+  }
+  .iconfont{
+    font-size: 50rpx;
+  }
+  .order_name{
+    font-size: 20rpx;
+  }
+  .app_info_wrap{
+    margin-top: 30rpx;
+    padding: 20rpx;
+    background-color: #ffffff;
+  }
+  
+  .app_info_item{
+    padding: 20rpx;
+    border-bottom: 1px solid #ccc;
+  }
+  .iconleft{
+    font-size: 30rpx;
+  }
+  
+  

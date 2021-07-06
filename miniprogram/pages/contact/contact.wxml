@@ -1,0 +1,36 @@
+<!--miniprogram/pages/contact/contact.wxml-->
+<!--<text>miniprogram/pages/contact/contact.wxml</text>-->
+
+<view class="wrap">
+  <scroll-view scroll-y class="chat" scroll-top="{{scrollTop}}">
+    <view class="list">
+      <view class="chat-news" wx:for="{{list}}" wx:key="{{item.id}}">
+        <!-- 根据角色判断 -->
+        <block wx:if="{{item.role === 'me'}}">
+          <!-- 自己的消息显示在右侧 -->
+          <view class="news-lf">
+            <text class="new-txt">{{item.content}}</text>
+            <image class="new-img" src="cloud://cw-6g9uc77g2c0f5bc8.6377-cw-6g9uc77g2c0f5bc8-1303253720/img/headicon/cat.jpg"></image>
+          </view>
+        </block>
+        <!-- 对方的消息显示在左侧 -->
+        <block wx:else>
+          <view>
+            <image class="new-img" src="cloud://cw-6g9uc77g2c0f5bc8.6377-cw-6g9uc77g2c0f5bc8-1303253720/img/headicon/cat.jpg"></image>
+            <text class="new-txt new-text">{{item.content}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<!-- 聊天输入 -->
+<view class="message">
+  <form>
+    <!-- 微信小程序处理软键盘弹出布局上移遮住输入框的解决方法 （设置cursor-spacing="20"）-->
+    <view class="row">
+      <input type="text" cursor-spacing="20" placeholder="请输入聊天内容..." bindinput="bindChange"></input>
+      <button type="primary" bindtap="send" formType="reset" size="small" button-hover="blue">发送</button>
+    </view>
+  </form>
+</view>

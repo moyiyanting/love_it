@@ -1,0 +1,26 @@
+.page{
+    background: #fff;
+}
+.listItems{
+    padding: 0 30rpx;
+    height: 120rpx;
+    line-height: 120rpx;
+    border-bottom: 1rpx solid #cccccc;
+}
+.listLeft{
+    float: left;
+}
+.listRight{
+    float: left;
+    margin-left: 20rpx;
+    margin-top: 40rpx;
+    width: 420rpx;
+}
+.btn{
+    width: 80%;
+    height: 90rpx;
+    border-radius: 45rpx;
+    background: #f12035;
+    color: #fff;
+    margin-top: 30rpx;
+}

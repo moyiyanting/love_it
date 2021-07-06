@@ -1,0 +1,5 @@
+<view class="up_img_wrap">
+    <image  src="{{src}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+        
+    </image>
+</view>

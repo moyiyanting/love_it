@@ -1,0 +1,40 @@
+<!--pages/index/index.wxml-->
+<!--轮播图-->
+<view class="banner">
+  <swiper style="width:720rpx;height:350rpx"
+    indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}"
+    interval="{{interval}}"
+    duration="{{duration}}"
+      >
+    <block wx:for="{{banner}}" wx:key="_id">
+    <swiper-item>
+      <image style="width:720rpx;height:350rpx" src="{{item.src}}" class="img" bindload="imageLoad"/>
+​    </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!--公告-->
+<view class="notice" style="width:700rpx;height:50rpx">
+    <image class="notice_icon" src="/images/notice.png"></image>
+    <swiper class="notice_swiper" vertical autoplay circular>
+      <swiper-item>
+        <view class="notice_itemr"><text>公告</text></view>
+      </swiper-item>
+    </swiper>
+</view>
+<!--两个按钮-->
+<view class="classfiy" style="width:750rpx;height:100px">
+  <view class="classfiy_button"  wx:key="_id"style="width:400rpx;height:100px">
+    <image style="width:355rpx;height:180rpx" class="img_1" src="cloud://cw-6g9uc77g2c0f5bc8.6377-cw-6g9uc77g2c0f5bc8-1303253720/img/icon/领养按钮.PNG" bindtap="adoption"></image>
+  </view>
+  <view class="classfiy_button"  wx:key="_id"style="width:400rpx;height:100px">
+    <image style="width:355rpx;height:180rpx" class="img_1" src="cloud://cw-6g9uc77g2c0f5bc8.6377-cw-6g9uc77g2c0f5bc8-1303253720/img/icon/送养按钮.PNG" bindtap="feeding"></image>
+  </view>
+</view>
+<!--一个按钮-->
+<view class="classfiy_1"  bindtap="raise">
+  <view class="raise" wx:for="{{raise}}" wx:key="_id">
+    <image src="{{item.src}}" class="img_1"></image>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+<view class="about_us_wrap">
+     <view class="about_us_item">版本介绍</view>
+     <view class="about_us_item">app介绍</view>
+</view>

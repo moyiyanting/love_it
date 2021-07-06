@@ -1,0 +1,4 @@
+<view class='container'>
+  <input class='ipt' value='{{price}}' bindinput='onInput' type='digit' />
+  <button class='btn-pay' bindtap='pay'>Pay</button>
+</view>

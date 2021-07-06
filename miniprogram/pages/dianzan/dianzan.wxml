@@ -1,0 +1,25 @@
+<!--miniprogram/pages/dianzan/dianzan.wxml-->
+<!--<text>miniprogram/pages/dianzan/dianzan.wxml</text>-->
+
+<scroll-view class="list" scroll-y>
+  <view class="tongzhi" wx:for="{{dianzanlist}}" wx:key="_id">
+    <view class="tongzhi-content">
+      <view class='firstline'>
+        <view class='apart'>
+          <view class='username'>
+            <text>{{item.username}}</text>
+          </view>
+        </view>
+        <view class='time'>
+            <text>{{item.time}}</text>
+          </view>
+      </view>
+      <view class='secondline'>
+        <view class='tishi'>
+            <text>点赞了你的动态♡</text>
+        </view>
+      </view>
+    </view>
+    <image class='cover' src="{{item.cover}}"/>
+  </view>
+</scroll-view>

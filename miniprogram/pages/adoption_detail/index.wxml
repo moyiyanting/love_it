@@ -1,0 +1,23 @@
+<!--pages/adoption_detail/index.wxml-->
+<view class="picture">
+    <block wx:for="{{feeding_pic}}" wx:key="index">
+        <image  class="picture_1" src="{{item}}" >
+        </image>
+    </block>
+</view>
+<view class="adoption_detail">
+    <text class="petName" >名字：{{petName}}</text>
+    <text class="petType">类别：{{petType}}</text>
+    <text class="kind_detail">详细品种：{{kind_detail}}</text>
+    <text class="color">颜色：{{color}}</text>
+    <text class="years">年龄：{{years}}</text>
+    <text class="notes_text">宠物的详细介绍:</text>
+    <view class="notes_box" wx:if="{{notes!==''}}">
+            <view class="notes">
+                  <view class="notes_text">{{notes}}</view>
+            </view>
+    </view>
+    <view class="adoption">
+    <navigator  url="" >领养它</navigator>
+    </view>
+</view>

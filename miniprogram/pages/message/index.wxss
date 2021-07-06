@@ -1,0 +1,190 @@
+/* pages/message/index.wxss */
+
+/*私信、通知*/
+.flex-row{
+  flex-direction: row;
+  display: flex;
+  }
+  .onTabLine{
+  width: 120rpx;
+  height: 5rpx;
+  background-color:#FFD700;
+  margin-top:15rpx;
+  }
+  .line{
+  width: 750rpx;
+  height: 2rpx;
+  background-color: #F2F2F2;
+  margin: 0rpx auto 0 auto;
+  }
+  .message,.notify{
+  display: flex;
+  flex-direction: row;
+  font-size:36rpx;
+  margin-top: 20rpx;
+  width: 120rpx;
+  color:#CDCDCD;
+  }
+  .message{
+  margin-left: 200rpx;
+  }
+  .notify{
+  margin-left: 150rpx;
+  }
+  .active{
+  color:#FFD700;
+  }
+  .selectTab{
+  position: fixed;
+  background-color: #FFF;
+  z-index: 100;
+  }
+/*私信消息*/
+.message-list{
+  display: flex;
+  flex-direction: column;
+}
+.user{
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #F2F2F2;
+}
+.user-content{
+  display: flex;
+  flex-direction: column;
+}
+.header-icon{
+  width: 104rpx;
+  height: 104rpx;
+  border-radius: 80rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+}
+.firstline{
+  display: flex;
+  flex-direction: row;
+}
+.apart{
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+  width: 400rpx;
+}
+.username{
+  font-size: 36rpx;
+  margin-top: 26rpx;
+  font-weight: 400;
+}
+.time{
+  display: flex;
+  width: 60rpx;
+  font-size: 24rpx;
+  margin-top: 26rpx;
+  color: #AEAEAE;
+  margin-left: 140rpx;
+}
+/*内容第二行*/
+.secondline{
+  display: flex;
+  flex-direction: row;
+}
+/*对话框消息内容*/
+.dialog{
+  width: 545rpx;
+  font-size: 28rpx;
+  color: #AEAEAE;
+  margin-left: 20rpx;
+  margin-top: 15rpx;
+}
+
+/*通知界面*/
+/*系统通知*/
+.notify-type{
+  display: flex;
+  flex-direction: row;
+}
+.notify-icon{
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.notify-icon>image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.notify-name{
+  font-size: 36rpx;
+  font-weight: 500;
+  margin-top: 35rpx;
+  margin-left: 36rpx;
+}
+/*分割线*/
+.liner{
+  width: 100%;
+  height: 2rpx;
+  background-color: #F2F2F2;
+  margin-top: 20rpx;
+}
+/*点赞*/
+.thumbs-up-type{
+  display: flex;
+  flex-direction: row;
+}
+.thumbs-up-icon{
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.thumbs-up-icon>image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.thumbs-up-name{
+  font-size: 36rpx;
+  font-weight: 500;
+  margin-top: 35rpx;
+  margin-left: 36rpx;
+}
+/*评论*/
+.dialog-type{
+  display: flex;
+  flex-direction: row;
+}
+.dialog-icon{
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.dialog-icon>image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.dialog-name{
+  font-size: 36rpx;
+  font-weight: 500;
+  margin-top: 35rpx;
+  margin-left: 41rpx;
+}
+/*我关注的*/
+.follow-type{
+  display: flex;
+  flex-direction: row;
+}
+.follow-icon{
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.follow-icon>image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.follow-name{
+  font-size: 36rpx;
+  font-weight: 500;
+  margin-top: 35rpx;
+  margin-left: 36rpx;
+}
+/*未读消息框*/
+.unread{
+  margin-top: 16rpx;
+  font-size: 26rpx;
+  color: #aeaeae;
+  text-align: center;
+}

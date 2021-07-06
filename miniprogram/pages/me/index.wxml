@@ -1,0 +1,64 @@
+<!--pages/me/index.wxml-->
+<view class="user_info_wrap" >
+  <view wx:if="{{userinfo.avatarUrl}}" class="user_img_wrap" >
+    <image class="user_bg" src="{{userinfo.avatarUrl}}" mode="widthFix" />
+      <view class="user_info">
+        <image class="user_icon" src="{{userinfo.avatarUrl}}"></image>
+        <view class="user_name">{{userinfo.nickName}}</view>
+      </view>  
+  </view>
+  <view wx:else class="user_btn">
+    <navigator class="user_btn_na" url="/pages/login/index">  登录  </navigator> 
+  </view>
+</view>
+<view class="user_content">
+  <view class="user_main">
+    <!-- 我的中心 -->
+    <view class="main_wrap">
+      <navigator >
+        <view class="his_num">0</view>
+        <view class="his_name">我的收藏</view>
+      </navigator>
+      <navigator >
+        <view class="his_num">0</view>
+        <view class="his_name">我的关注</view>
+      </navigator>
+      <navigator >
+        <view class="his_num">0</view>
+        <view class="his_name">我的足迹</view>
+      </navigator>
+      <navigator >
+        <view class="his_num">0</view>
+        <view class="his_name">捐款记录</view>
+      </navigator>
+    </view>
+    <!-- 消息中心 -->
+    <view class="orders_wrap">
+      <view class="orders_title">消息中心</view>
+      <view class="order_content">
+        <navigator >
+          <view class="iconfont icon-chongwuwo"></view>
+          <view class="order_name">领养审核</view>
+        </navigator>
+        <navigator >
+          <view class="iconfont icon-chongwulingyang-copy"></view>
+          <view class="order_name">已领养</view>
+        </navigator>
+        <navigator >
+          <view class="iconfont icon-xiaowo"></view>
+          <view class="order_name">送养审核</view>
+        </navigator>
+        <navigator >
+          <view class="iconfont icon-chongwuleyuan1"></view>
+          <view class="order_name">已送养</view>
+        </navigator>
+      </view>
+    </view>
+   <view class="app_info_wrap">
+     <navigator  url="/pages/my_space/index"  class="app_info_item">个人空间</navigator>
+     <navigator  url="/pages/address/index"  class="app_info_item">我的地址</navigator>
+     <navigator url="/pages/feedback/index"class="app_info_item">意见反馈</navigator> 
+     <navigator url="/pages/about_us/index" class="app_info_item">关于我们</navigator>
+   </view>
+  </view>
+</view>

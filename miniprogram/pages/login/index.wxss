@@ -1,0 +1,9 @@
+.user_btn {
+    position: absolute;
+    left: 50%;
+    margin-top: 20rpx;
+    transform: translateX(-50%);
+    border: 2rpx solid greenyellow;
+    font-size: 38rpx;
+    border-radius: 10rpx;
+  }

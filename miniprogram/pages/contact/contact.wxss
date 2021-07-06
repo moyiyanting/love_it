@@ -1,0 +1,105 @@
+/* miniprogram/pages/concern/concern.wxss */
+
+page {
+  height: 100%;
+}
+
+.chat {
+  padding: 5rpx 10rpx;
+  font-size: 14px;
+  line-height: 80rpx;
+  word-break: break-all;
+  margin-bottom: 100rpx;
+  box-sizing: border-box;
+}
+
+.wrap {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  border-top: 0px;
+  box-sizing: border-box;
+}
+
+/* 聊天 */
+
+.chat-news {
+  width: 100%;
+  overflow: hidden;
+}
+
+.news-lf {
+  float: right;
+  padding-right: 20rpx;
+}
+
+.chat-news::after {
+  display: block;
+  height: 0;
+  clear: both;
+  content: '';
+}
+
+.new-rl {
+  float: left;
+  padding-left: 20rpx;
+}
+
+.new-img {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.new-txt {
+  max-width: 300rpx;
+  display: inline-block;
+  border-radius: 6rpx;
+  line-height: 60rpx;
+  background-color: #FFD700;
+  padding: 5rpx 20rpx;
+  margin: 0 10rpx;
+  margin-left: 50rpx;
+}
+
+.new-text {
+  margin-left: 0;
+  background: #eee;
+}
+
+/* 信息输入区域 */
+
+.message {
+  position: fixed;
+  flex-direction: row;
+  bottom: 0;
+  width: 100%;
+  height: 102rpx;
+  padding: 10rpx;
+  background-color: #fff;
+  border-top: 2rpx solid #eee;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+.message input {
+  float: left;
+  width: 76%;
+  height: 100%;
+  line-height: 80rpx;
+  padding: 0 10rpx;
+  font-size: 35rpx;
+  color: #666;
+}
+
+.message button {
+  float: right;
+  font-size: 35rpx;
+  margin-top: 10rpx;
+}
+
+.row {
+  flex-direction: row;
+}

@@ -1,0 +1,121 @@
+
+<!-- 导航栏   -->
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for-items="{{petType}}" wx:key="{{index}}">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index?'weui-bar__item_on':''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform:translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <view class="weui-panel weui-panel_access">
+            <!--领养的宠物展示-->
+            <view class="adoption_pet">
+              <view class="adoption_pet_1" wx:for="{{pet0}}" wx:key="_id">
+              <navigator class="adoption" url="../adoption_detail/index?id={{item._id}}">
+                <image style="width:280rpx;height:280rpx" src="{{item.feeding_pic[0]}}" class="img"></image>
+                <view class="adoption_pet_2">
+                  <text class="name">{{item.petName}}</text>
+                  <text class="kind_detail">{{item.kind_detail}}</text>
+                  <text class="years">{{item.years}}</text>
+                  </view>
+              </navigator>
+            </view>
+            </view>
+            <!-- 查看更多 -->
+            <view class="weui-panel__ft">  
+              <view class="weui-cell weui-cell_access weui-cell_link">
+                <view class="weui-cell__bd">查看更多</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view class="weui-panel weui-panel_access">
+            <!--领养的宠物展示-->
+<view class="adoption_pet">
+  <view class="adoption_pet_1" wx:for="{{pet1}}" wx:key="_id">
+    <navigator class="adoption" url="../adoption_detail/index?id={{item._id}}">
+    <image style="width:280rpx;height:280rpx" src="{{item.feeding_pic[0]}}" class="img"></image>
+    <view class="adoption_pet_2">
+      <text class="name">{{item.petName}}</text>
+      <text class="kind_detail">{{item.kind_detail}}</text>
+      <text class="years">{{item.years}}</text>
+    </view>
+  </navigator>
+  </view>
+</view>
+          
+            <!-- 查看更多 -->
+            <view class="weui-panel__ft">  
+              <view class="weui-cell weui-cell_access weui-cell_link">
+                <view class="weui-cell__bd">查看更多</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+              </view>
+            </view>
+            
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <view class="weui-panel weui-panel_access">
+            <!--领养的宠物展示-->
+            <view class="adoption_pet">
+              <view class="adoption_pet_1" wx:for="{{pet2}}" wx:key="_id">
+              <navigator class="adoption" url="../adoption_detail/index?id={{item._id}}">
+                <image style="width:280rpx;height:280rpx" src="{{item.feeding_pic[0]}}" class="img"></image>
+                <view class="adoption_pet_2">
+                  <text class="name">{{item.petName}}</text>
+                  <text class="kind_detail">{{item.kind_detail}}</text>
+                  <text class="years">{{item.years}}</text>
+                  </view>
+              </navigator>
+            </view>
+            </view>
+            <!-- 查看更多 -->
+            <view class="weui-panel__ft">  
+              <view class="weui-cell weui-cell_access weui-cell_link">
+                <view class="weui-cell__bd">查看更多</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+          <view class="weui-panel weui-panel_access">
+            <!--领养的宠物展示-->
+            <view class="adoption_pet">
+              <view class="adoption_pet_1" wx:for="{{pet3}}" wx:key="_id">
+              <navigator class="adoption" url="../adoption_detail/index?id={{item._id}}">
+                <image style="width:280rpx;height:280rpx" src="{{item.feeding_pic[0]}}" class="img"></image>
+                <view class="adoption_pet_2">
+                  <text class="name">{{item.petName}}</text>
+                  <text class="kind_detail">{{item.kind_detail}}</text>
+                  <text class="years">{{item.years}}</text>
+                  </view>
+              </navigator>
+            </view>
+            </view>
+            <!-- 查看更多 -->
+            <view class="weui-panel__ft">  
+              <view class="weui-cell weui-cell_access weui-cell_link">
+                <view class="weui-cell__bd">查看更多</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="page__bd page__bd_spacing">
+		<view class="weui-footer">
+			<view class="weui-footer__text">love it 2020</view>
+    </view>
+  </view>
+</view>
